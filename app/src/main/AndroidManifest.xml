@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.docenteapp">
+
+    <!-- Permisos necesarios -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+
+        <!-- Actividad de inicio de sesión como punto de entrada de la aplicación -->
+        <activity
+            android:name=".activities.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Actividad principal -->
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="Menú Principal" />
+
+        <!-- Actividad de asistencia -->
+        <activity
+            android:name=".activities.AttendanceActivity"
+            android:label="Marcar Asistencia" />
+
+        <!-- Actividad de asignaciones -->
+        <activity
+            android:name=".activities.AssignmentActivity"
+            android:label="Gestionar Asignaciones" />
+
+        <!-- Actividad de información de estudiantes -->
+        <activity
+            android:name=".activities.StudentInfoActivity"
+            android:label="Información de Estudiantes" />
+
+    </application>
+
+</manifest>
